@@ -14,9 +14,11 @@ Authenticate as `immudb` with `IMMUDB_ADMIN_PASSWORD`.
 
 ## Dependencies for immudb Hosting
 
+### Deployment Dependencies
+
 One immudb service uses a daily-backed-up volume. The HTTPS domain exposes the HTTP API and web console; gRPC remains project-private.
 
-## Implementation Details
+### Implementation Details
 
 Health uses `/api/v2/health`; data persists at `/data/immudb`. This is a one-replica topology. Immutability does not replace access control, backups, or retention planning.
 
